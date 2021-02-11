@@ -1,0 +1,1 @@
+docker run -d -v "D:\docker\deploy\solrdata:/var/solr" -p 8983:8983 --rm --name solr solr:8.6.3

@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  userservice:
+    depends_on:
+      - redis
+    environment:
+      - spring.redis.host=redis
+    image: "bc92/user-service"
+    ports:
+      - "2081:2081"
+    networks:
+      - user-service-net
+  redis:
+    image: "redis:alpine"
+    networks:
+      - user-service-net
+
+networks:
+  user-service-net:
+    driver: bridge
+

@@ -1,0 +1,762 @@
+2021-02-10 21:01:52.918 INFO  (main) [   ] o.e.j.u.log Logging initialized @1432ms to org.eclipse.jetty.util.log.Slf4jLog
+2021-02-10 21:01:53.031 WARN  (main) [   ] o.e.j.x.XmlConfiguration Ignored arg: <Arg name="threadpool">
+    <New id="threadpool" class="com.codahale.metrics.jetty9.InstrumentedQueuedThreadPool"><Arg name="registry">
+        <Call id="solrJettyMetricRegistry" name="getOrCreate" class="com.codahale.metrics.SharedMetricRegistries"><Arg>solr.jetty</Arg></Call>
+      </Arg></New>
+  </Arg>
+2021-02-10 21:01:53.222 INFO  (main) [   ] o.e.j.s.Server jetty-9.4.27.v20200227; built: 2020-02-27T18:37:21.340Z; git: a304fd9f351f337e7c0e2a7c28878dd536149c6c; jvm 11.0.10+9
+2021-02-10 21:01:53.272 INFO  (main) [   ] o.e.j.d.p.ScanningAppProvider Deployment monitor [file:///opt/solr-8.6.3/server/contexts/] at interval 0
+2021-02-10 21:01:53.692 INFO  (main) [   ] o.e.j.w.StandardDescriptorProcessor NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+2021-02-10 21:01:53.707 INFO  (main) [   ] o.e.j.s.session DefaultSessionIdManager workerName=node0
+2021-02-10 21:01:53.707 INFO  (main) [   ] o.e.j.s.session No SessionScavenger set, using defaults
+2021-02-10 21:01:53.710 INFO  (main) [   ] o.e.j.s.session node0 Scavenging every 660000ms
+2021-02-10 21:01:53.794 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2021-02-10 21:01:53.802 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 8.6.3
+2021-02-10 21:01:53.802 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2021-02-10 21:01:53.802 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /opt/solr
+2021-02-10 21:01:53.803 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2021-02-10T21:01:53.803494Z
+2021-02-10 21:01:53.852 INFO  (main) [   ] o.a.s.c.SolrPaths Using system property solr.solr.home: /var/solr/data
+2021-02-10 21:01:53.861 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /var/solr/data/solr.xml
+2021-02-10 21:01:53.983 INFO  (main) [   ] o.a.s.c.SolrXmlConfig MBean server found: com.sun.jmx.mbeanserver.JmxMBeanServer@6fa51cd4, but no JMX reporters were configured - adding default JMX reporter.
+2021-02-10 21:01:54.797 INFO  (main) [   ] o.a.s.h.c.HttpShardHandlerFactory Host whitelist initialized: WhitelistHostChecker [whitelistHosts=null, whitelistHostCheckingEnabled=true]
+2021-02-10 21:01:55.082 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@37ce3644[provider=null,keyStore=null,trustStore=null]
+2021-02-10 21:01:55.083 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@37ce3644[provider=null,keyStore=null,trustStore=null]
+2021-02-10 21:01:55.398 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@6137cf6e[provider=null,keyStore=null,trustStore=null]
+2021-02-10 21:01:55.398 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@6137cf6e[provider=null,keyStore=null,trustStore=null]
+2021-02-10 21:01:55.507 WARN  (main) [   ] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
+2021-02-10 21:01:55.758 INFO  (main) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
+2021-02-10 21:01:55.763 INFO  (main) [   ] o.a.s.h.a.MetricsHistoryHandler No .system collection, keeping metrics history in memory.
+2021-02-10 21:01:55.870 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.node' (registry 'solr.node') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@6fa51cd4
+2021-02-10 21:01:55.870 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jvm' (registry 'solr.jvm') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@6fa51cd4
+2021-02-10 21:01:55.881 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jetty' (registry 'solr.jetty') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@6fa51cd4
+2021-02-10 21:01:55.964 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath /var/solr/data
+2021-02-10 21:01:55.965 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [directory]
+2021-02-10 21:01:56.079 INFO  (main) [   ] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@62dae540{/solr,file:///opt/solr-8.6.3/server/solr-webapp/webapp/,AVAILABLE}{/opt/solr-8.6.3/server/solr-webapp/webapp}
+2021-02-10 21:01:56.086 INFO  (coreLoadExecutor-13-thread-1) [   x:directory] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.6.3
+2021-02-10 21:01:56.104 INFO  (main) [   ] o.e.j.s.AbstractConnector Started ServerConnector@7b84fcf8{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2021-02-10 21:01:56.106 INFO  (main) [   ] o.e.j.s.Server Started @4622ms
+2021-02-10 21:01:56.378 INFO  (coreLoadExecutor-13-thread-1) [   x:directory] o.a.s.s.IndexSchema Schema name=default-config
+2021-02-10 21:01:56.974 WARN  (coreLoadExecutor-13-thread-1) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitNorms to be specified in schema, hardcoded behavior is omitNorms=true
+2021-02-10 21:01:56.974 WARN  (coreLoadExecutor-13-thread-1) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitTermFreqAndPositions to be specified in schema, hardcoded behavior is omitTermFreqAndPositions=true
+2021-02-10 21:01:56.974 WARN  (coreLoadExecutor-13-thread-1) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termOffsets to be specified in schema, hardcoded behavior is termOffsets=false
+2021-02-10 21:01:56.975 WARN  (coreLoadExecutor-13-thread-1) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termPositions to be specified in schema, hardcoded behavior is termPositions=false
+2021-02-10 21:01:56.975 WARN  (coreLoadExecutor-13-thread-1) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitPositions to be specified in schema, hardcoded behavior is omitPositions=true
+2021-02-10 21:01:57.660 INFO  (coreLoadExecutor-13-thread-1) [   x:directory] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2021-02-10 21:01:58.289 INFO  (coreLoadExecutor-13-thread-1) [   x:directory] o.a.s.c.CoreContainer Creating SolrCore 'directory' using configuration from instancedir /var/solr/data/directory, trusted=true
+2021-02-10 21:01:58.342 INFO  (coreLoadExecutor-13-thread-1) [   x:directory] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.directory' (registry 'solr.core.directory') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@6fa51cd4
+2021-02-10 21:01:58.376 INFO  (coreLoadExecutor-13-thread-1) [   x:directory] o.a.s.c.SolrCore [[directory] ] Opening new SolrCore at [/var/solr/data/directory], dataDir=[/var/solr/data/directory/data/]
+2021-02-10 21:01:59.630 INFO  (coreLoadExecutor-13-thread-1) [   x:directory] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2021-02-10 21:01:59.630 INFO  (coreLoadExecutor-13-thread-1) [   x:directory] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2021-02-10 21:01:59.654 INFO  (coreLoadExecutor-13-thread-1) [   x:directory] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2021-02-10 21:01:59.654 INFO  (coreLoadExecutor-13-thread-1) [   x:directory] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2021-02-10 21:01:59.786 INFO  (coreLoadExecutor-13-thread-1) [   x:directory] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/solr/data/directory/conf
+2021-02-10 21:01:59.808 INFO  (coreLoadExecutor-13-thread-1) [   x:directory] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2021-02-10 21:01:59.817 INFO  (coreLoadExecutor-13-thread-1) [   x:directory] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2021-02-10 21:01:59.835 INFO  (coreLoadExecutor-13-thread-1) [   x:directory] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2021-02-10 21:01:59.842 INFO  (coreLoadExecutor-13-thread-1) [   x:directory] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1691343566763196416
+2021-02-10 21:01:59.852 INFO  (searcherExecutor-15-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:01:59.852 INFO  (searcherExecutor-15-thread-1-processing-x:directory) [   x:directory] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2021-02-10 21:01:59.865 INFO  (searcherExecutor-15-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 0 ms
+2021-02-10 21:02:10.027 INFO  (qtp1446922577-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=17
+2021-02-10 21:02:10.065 INFO  (qtp1446922577-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=42
+2021-02-10 21:02:10.123 INFO  (qtp1446922577-25) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=27
+2021-02-10 21:02:12.396 INFO  (qtp1446922577-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=1
+2021-02-10 21:02:12.441 INFO  (qtp1446922577-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=39
+2021-02-10 21:02:12.442 INFO  (qtp1446922577-23) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1612990928765&ts=1612990928765} status=503 QTime=5
+2021-02-10 21:02:12.446 INFO  (qtp1446922577-19) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1612990931272} status=0 QTime=26
+2021-02-10 21:02:12.447 INFO  (qtp1446922577-16) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/system params={wt=json&_=1612990931272} status=0 QTime=28
+2021-02-10 21:02:12.485 INFO  (qtp1446922577-25) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/replication params={wt=json&command=details&_=1612990931273} status=0 QTime=67
+2021-02-10 21:02:14.147 INFO  (qtp1446922577-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=0
+2021-02-10 21:02:14.166 INFO  (qtp1446922577-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=18
+2021-02-10 21:02:18.398 INFO  (qtp1446922577-25) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=0
+2021-02-10 21:02:18.416 INFO  (qtp1446922577-18) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=11
+2021-02-10 21:02:18.422 INFO  (qtp1446922577-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=24
+2021-02-10 21:02:18.433 INFO  (qtp1446922577-21) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=28
+2021-02-10 21:02:18.546 INFO  (qtp1446922577-23) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=1
+2021-02-10 21:02:24.952 INFO  (qtp1446922577-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=1
+2021-02-10 21:02:24.962 INFO  (qtp1446922577-41) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=8
+2021-02-10 21:02:24.967 INFO  (qtp1446922577-17) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=3
+2021-02-10 21:02:24.984 INFO  (qtp1446922577-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=29
+2021-02-10 21:02:25.075 INFO  (qtp1446922577-24) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=1
+2021-02-10 21:02:36.199 INFO  (qtp1446922577-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=0
+2021-02-10 21:02:36.206 INFO  (qtp1446922577-23) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=1
+2021-02-10 21:02:36.216 INFO  (qtp1446922577-21) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=13
+2021-02-10 21:02:36.242 INFO  (qtp1446922577-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=43
+2021-02-10 21:02:36.351 INFO  (qtp1446922577-24) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=4
+2021-02-10 21:02:42.355 INFO  (qtp1446922577-18) [   x:directory] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at /var/solr/data/directory/conf/managed-schema
+2021-02-10 21:02:42.480 INFO  (qtp1446922577-18) [   x:directory] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.6.3
+2021-02-10 21:02:42.565 INFO  (qtp1446922577-18) [   x:directory] o.a.s.s.IndexSchema Schema name=default-config
+2021-02-10 21:02:42.695 WARN  (qtp1446922577-18) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitNorms to be specified in schema, hardcoded behavior is omitNorms=true
+2021-02-10 21:02:42.695 WARN  (qtp1446922577-18) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitTermFreqAndPositions to be specified in schema, hardcoded behavior is omitTermFreqAndPositions=true
+2021-02-10 21:02:42.695 WARN  (qtp1446922577-18) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termOffsets to be specified in schema, hardcoded behavior is termOffsets=false
+2021-02-10 21:02:42.695 WARN  (qtp1446922577-18) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termPositions to be specified in schema, hardcoded behavior is termPositions=false
+2021-02-10 21:02:42.695 WARN  (qtp1446922577-18) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitPositions to be specified in schema, hardcoded behavior is omitPositions=true
+2021-02-10 21:02:43.027 INFO  (qtp1446922577-18) [   x:directory] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2021-02-10 21:02:43.369 INFO  (qtp1446922577-18) [   x:directory] o.a.s.c.CoreContainer Reloading SolrCore 'directory' using configuration from instancedir /var/solr/data/directory
+2021-02-10 21:02:43.403 INFO  (qtp1446922577-18) [   x:directory] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.directory' (registry 'solr.core.directory') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@6fa51cd4
+2021-02-10 21:02:43.404 INFO  (qtp1446922577-18) [   x:directory] o.a.s.c.SolrCore [[directory] ] Opening new SolrCore at [/var/solr/data/directory], dataDir=[/var/solr/data/directory/data/]
+2021-02-10 21:02:43.528 INFO  (qtp1446922577-18) [   x:directory] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2021-02-10 21:02:43.528 INFO  (qtp1446922577-18) [   x:directory] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2021-02-10 21:02:43.538 INFO  (qtp1446922577-18) [   x:directory] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/solr/data/directory/conf
+2021-02-10 21:02:43.539 INFO  (qtp1446922577-18) [   x:directory] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2021-02-10 21:02:43.540 INFO  (qtp1446922577-18) [   x:directory] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2021-02-10 21:02:43.545 INFO  (qtp1446922577-18) [   x:directory] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2021-02-10 21:02:43.547 INFO  (qtp1446922577-18) [   x:directory] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1691343612592259072
+2021-02-10 21:02:43.556 INFO  (searcherExecutor-21-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:02:43.557 INFO  (searcherExecutor-21-thread-1-processing-x:directory) [   x:directory] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2021-02-10 21:02:43.571 INFO  (searcherExecutor-21-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 0 ms
+2021-02-10 21:02:43.602 INFO  (qtp1446922577-18) [   x:directory] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2021-02-10 21:02:43.608 INFO  (qtp1446922577-18) [   ] o.a.s.c.S.Request [directory]  webapp=/solr path=/schema params={wt=json&_=1612990937257} status=0 QTime=1602
+2021-02-10 21:02:43.608 INFO  (searcherExecutor-21-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:02:43.609 INFO  (qtp1446922577-18) [   ] o.a.s.c.SolrCore [directory]  CLOSING SolrCore org.apache.solr.core.SolrCore@6bd05d2b
+2021-02-10 21:02:43.610 INFO  (qtp1446922577-18) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.directory tag=SolrCore@6bd05d2b
+2021-02-10 21:02:43.614 INFO  (qtp1446922577-18) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@232b0fa7: rootName = null, domain = solr.core.directory, service url = null, agent id = null] for registry solr.core.directory/com.codahale.metrics.MetricRegistry@651738ce
+2021-02-10 21:02:43.622 INFO  (searcherExecutor-21-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 1 ms
+2021-02-10 21:02:45.225 INFO  (qtp1446922577-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=0
+2021-02-10 21:02:45.233 INFO  (qtp1446922577-41) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=1
+2021-02-10 21:02:45.242 INFO  (qtp1446922577-22) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=15
+2021-02-10 21:02:45.248 INFO  (qtp1446922577-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=24
+2021-02-10 21:02:45.364 INFO  (qtp1446922577-23) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=4
+2021-02-10 21:02:50.372 INFO  (qtp1446922577-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=0
+2021-02-10 21:02:50.385 INFO  (qtp1446922577-18) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=1
+2021-02-10 21:02:50.395 INFO  (qtp1446922577-25) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=16
+2021-02-10 21:02:50.398 INFO  (qtp1446922577-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=23
+2021-02-10 21:02:50.486 INFO  (qtp1446922577-41) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=1
+2021-02-10 21:02:53.020 ERROR (qtp1446922577-25) [   x:directory] o.a.s.h.RequestHandlerBase org.apache.solr.api.ApiBag$ExceptionWithErrObject: error processing commands, errors: [{delete-field={name=comments}, errorMessages=[Can't delete field 'comments' because it's referred to by at least one copy field directive.
+]}], 
+	at org.apache.solr.handler.SchemaHandler.handleRequestBody(SchemaHandler.java:95)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:214)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2606)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:815)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:588)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:415)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1596)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:590)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1215)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:221)
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+2021-02-10 21:02:53.020 INFO  (qtp1446922577-25) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/schema params={wt=json&_=1612990937257} status=400 QTime=2
+2021-02-10 21:02:55.680 INFO  (qtp1446922577-41) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=1
+2021-02-10 21:02:55.697 INFO  (qtp1446922577-25) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=1
+2021-02-10 21:02:55.700 INFO  (qtp1446922577-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=19
+2021-02-10 21:02:55.710 INFO  (qtp1446922577-22) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=25
+2021-02-10 21:02:55.822 INFO  (qtp1446922577-41) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=2
+2021-02-10 21:02:57.531 ERROR (qtp1446922577-22) [   x:directory] o.a.s.h.RequestHandlerBase org.apache.solr.api.ApiBag$ExceptionWithErrObject: error processing commands, errors: [{delete-field={name=comments_str}, errorMessages=[Can't delete field 'comments_str' because it's referred to by at least one copy field directive.
+]}], 
+	at org.apache.solr.handler.SchemaHandler.handleRequestBody(SchemaHandler.java:95)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:214)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2606)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:815)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:588)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:415)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1596)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:590)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1215)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:221)
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+2021-02-10 21:02:57.531 INFO  (qtp1446922577-22) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/schema params={wt=json&_=1612990937257} status=400 QTime=1
+2021-02-10 21:03:44.509 INFO  (qtp1446922577-41) [   x:directory] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at /var/solr/data/directory/conf/managed-schema
+2021-02-10 21:03:44.927 INFO  (qtp1446922577-41) [   x:directory] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.6.3
+2021-02-10 21:03:44.990 INFO  (qtp1446922577-41) [   x:directory] o.a.s.s.IndexSchema Schema name=default-config
+2021-02-10 21:03:45.133 WARN  (qtp1446922577-41) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitNorms to be specified in schema, hardcoded behavior is omitNorms=true
+2021-02-10 21:03:45.133 WARN  (qtp1446922577-41) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitTermFreqAndPositions to be specified in schema, hardcoded behavior is omitTermFreqAndPositions=true
+2021-02-10 21:03:45.133 WARN  (qtp1446922577-41) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termOffsets to be specified in schema, hardcoded behavior is termOffsets=false
+2021-02-10 21:03:45.133 WARN  (qtp1446922577-41) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termPositions to be specified in schema, hardcoded behavior is termPositions=false
+2021-02-10 21:03:45.133 WARN  (qtp1446922577-41) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitPositions to be specified in schema, hardcoded behavior is omitPositions=true
+2021-02-10 21:03:45.451 INFO  (qtp1446922577-41) [   x:directory] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2021-02-10 21:03:45.726 INFO  (qtp1446922577-41) [   x:directory] o.a.s.c.CoreContainer Reloading SolrCore 'directory' using configuration from instancedir /var/solr/data/directory
+2021-02-10 21:03:45.744 INFO  (qtp1446922577-41) [   x:directory] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.directory' (registry 'solr.core.directory') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@6fa51cd4
+2021-02-10 21:03:45.744 INFO  (qtp1446922577-41) [   x:directory] o.a.s.c.SolrCore [[directory] ] Opening new SolrCore at [/var/solr/data/directory], dataDir=[/var/solr/data/directory/data/]
+2021-02-10 21:03:45.808 INFO  (qtp1446922577-41) [   x:directory] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2021-02-10 21:03:45.809 INFO  (qtp1446922577-41) [   x:directory] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2021-02-10 21:03:45.816 INFO  (qtp1446922577-41) [   x:directory] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/solr/data/directory/conf
+2021-02-10 21:03:45.817 INFO  (qtp1446922577-41) [   x:directory] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2021-02-10 21:03:45.817 INFO  (qtp1446922577-41) [   x:directory] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2021-02-10 21:03:45.819 INFO  (qtp1446922577-41) [   x:directory] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2021-02-10 21:03:45.820 INFO  (qtp1446922577-41) [   x:directory] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1691343677890232320
+2021-02-10 21:03:45.832 INFO  (searcherExecutor-26-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:03:45.832 INFO  (searcherExecutor-26-thread-1-processing-x:directory) [   x:directory] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2021-02-10 21:03:45.838 INFO  (searcherExecutor-26-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 0 ms
+2021-02-10 21:03:45.871 INFO  (qtp1446922577-41) [   x:directory] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2021-02-10 21:03:45.873 INFO  (searcherExecutor-26-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:03:45.873 INFO  (qtp1446922577-41) [   ] o.a.s.c.S.Request [directory]  webapp=/solr path=/schema params={wt=json&_=1612990937257} status=0 QTime=1665
+2021-02-10 21:03:45.873 INFO  (qtp1446922577-41) [   ] o.a.s.c.SolrCore [directory]  CLOSING SolrCore org.apache.solr.core.SolrCore@41b49bbc
+2021-02-10 21:03:45.873 INFO  (qtp1446922577-41) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.directory tag=SolrCore@41b49bbc
+2021-02-10 21:03:45.873 INFO  (qtp1446922577-41) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@7ec1633e: rootName = null, domain = solr.core.directory, service url = null, agent id = null] for registry solr.core.directory/com.codahale.metrics.MetricRegistry@651738ce
+2021-02-10 21:03:45.877 INFO  (searcherExecutor-26-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 0 ms
+2021-02-10 21:03:47.414 INFO  (qtp1446922577-22) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=4
+2021-02-10 21:03:47.432 INFO  (qtp1446922577-25) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=22
+2021-02-10 21:03:47.473 INFO  (qtp1446922577-41) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=3
+2021-02-10 21:04:01.067 INFO  (qtp1446922577-25) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=0
+2021-02-10 21:04:01.072 INFO  (qtp1446922577-23) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=1
+2021-02-10 21:04:01.079 INFO  (qtp1446922577-18) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=13
+2021-02-10 21:04:01.092 INFO  (qtp1446922577-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=26
+2021-02-10 21:04:01.175 INFO  (qtp1446922577-17) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=2
+2021-02-10 21:04:03.758 INFO  (qtp1446922577-18) [   x:directory] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at /var/solr/data/directory/conf/managed-schema
+2021-02-10 21:04:03.861 INFO  (qtp1446922577-18) [   x:directory] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.6.3
+2021-02-10 21:04:03.929 INFO  (qtp1446922577-18) [   x:directory] o.a.s.s.IndexSchema Schema name=default-config
+2021-02-10 21:04:04.157 WARN  (qtp1446922577-18) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitNorms to be specified in schema, hardcoded behavior is omitNorms=true
+2021-02-10 21:04:04.157 WARN  (qtp1446922577-18) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitTermFreqAndPositions to be specified in schema, hardcoded behavior is omitTermFreqAndPositions=true
+2021-02-10 21:04:04.157 WARN  (qtp1446922577-18) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termOffsets to be specified in schema, hardcoded behavior is termOffsets=false
+2021-02-10 21:04:04.157 WARN  (qtp1446922577-18) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termPositions to be specified in schema, hardcoded behavior is termPositions=false
+2021-02-10 21:04:04.157 WARN  (qtp1446922577-18) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitPositions to be specified in schema, hardcoded behavior is omitPositions=true
+2021-02-10 21:04:04.435 INFO  (qtp1446922577-18) [   x:directory] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2021-02-10 21:04:04.695 INFO  (qtp1446922577-18) [   x:directory] o.a.s.c.CoreContainer Reloading SolrCore 'directory' using configuration from instancedir /var/solr/data/directory
+2021-02-10 21:04:04.713 INFO  (qtp1446922577-18) [   x:directory] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.directory' (registry 'solr.core.directory') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@6fa51cd4
+2021-02-10 21:04:04.713 INFO  (qtp1446922577-18) [   x:directory] o.a.s.c.SolrCore [[directory] ] Opening new SolrCore at [/var/solr/data/directory], dataDir=[/var/solr/data/directory/data/]
+2021-02-10 21:04:04.773 INFO  (qtp1446922577-18) [   x:directory] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2021-02-10 21:04:04.774 INFO  (qtp1446922577-18) [   x:directory] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2021-02-10 21:04:04.783 INFO  (qtp1446922577-18) [   x:directory] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/solr/data/directory/conf
+2021-02-10 21:04:04.784 INFO  (qtp1446922577-18) [   x:directory] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2021-02-10 21:04:04.784 INFO  (qtp1446922577-18) [   x:directory] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2021-02-10 21:04:04.786 INFO  (qtp1446922577-18) [   x:directory] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2021-02-10 21:04:04.786 INFO  (qtp1446922577-18) [   x:directory] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1691343697777524736
+2021-02-10 21:04:04.798 INFO  (searcherExecutor-31-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:04:04.798 INFO  (searcherExecutor-31-thread-1-processing-x:directory) [   x:directory] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2021-02-10 21:04:04.803 INFO  (searcherExecutor-31-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 0 ms
+2021-02-10 21:04:04.843 INFO  (qtp1446922577-18) [   x:directory] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2021-02-10 21:04:04.845 INFO  (qtp1446922577-18) [   ] o.a.s.c.S.Request [directory]  webapp=/solr path=/schema params={wt=json&_=1612990937257} status=0 QTime=1390
+2021-02-10 21:04:04.845 INFO  (searcherExecutor-31-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:04:04.845 INFO  (qtp1446922577-18) [   ] o.a.s.c.SolrCore [directory]  CLOSING SolrCore org.apache.solr.core.SolrCore@260543ff
+2021-02-10 21:04:04.845 INFO  (qtp1446922577-18) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.directory tag=SolrCore@260543ff
+2021-02-10 21:04:04.846 INFO  (qtp1446922577-18) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@ca72f5b: rootName = null, domain = solr.core.directory, service url = null, agent id = null] for registry solr.core.directory/com.codahale.metrics.MetricRegistry@651738ce
+2021-02-10 21:04:04.849 INFO  (searcherExecutor-31-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 0 ms
+2021-02-10 21:04:06.426 INFO  (qtp1446922577-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=0
+2021-02-10 21:04:06.441 INFO  (qtp1446922577-41) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=1
+2021-02-10 21:04:06.443 INFO  (qtp1446922577-24) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=14
+2021-02-10 21:04:06.451 INFO  (qtp1446922577-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=24
+2021-02-10 21:04:06.548 INFO  (qtp1446922577-23) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=2
+2021-02-10 21:04:45.177 INFO  (qtp1446922577-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=0
+2021-02-10 21:04:45.190 INFO  (qtp1446922577-18) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=3
+2021-02-10 21:04:45.190 INFO  (qtp1446922577-17) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=11
+2021-02-10 21:04:45.199 INFO  (qtp1446922577-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=21
+2021-02-10 21:04:45.289 INFO  (qtp1446922577-41) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=3
+2021-02-10 21:04:53.795 INFO  (qtp1446922577-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=0
+2021-02-10 21:04:53.803 INFO  (qtp1446922577-24) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=2
+2021-02-10 21:04:53.810 INFO  (qtp1446922577-23) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=14
+2021-02-10 21:04:53.821 INFO  (qtp1446922577-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=26
+2021-02-10 21:04:53.895 INFO  (qtp1446922577-18) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=2
+2021-02-10 21:04:58.293 INFO  (qtp1446922577-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=0
+2021-02-10 21:04:58.304 INFO  (qtp1446922577-21) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=1
+2021-02-10 21:04:58.308 INFO  (qtp1446922577-41) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=13
+2021-02-10 21:04:58.324 INFO  (qtp1446922577-25) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=26
+2021-02-10 21:04:58.408 INFO  (qtp1446922577-22) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=1
+2021-02-10 21:04:59.891 INFO  (qtp1446922577-41) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=0
+2021-02-10 21:04:59.904 INFO  (qtp1446922577-18) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=1
+2021-02-10 21:04:59.905 INFO  (qtp1446922577-23) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=11
+2021-02-10 21:04:59.908 INFO  (qtp1446922577-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=17
+2021-02-10 21:04:59.992 INFO  (qtp1446922577-21) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=1
+2021-02-10 21:05:03.876 INFO  (qtp1446922577-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=0
+2021-02-10 21:05:03.889 INFO  (qtp1446922577-22) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=1
+2021-02-10 21:05:03.893 INFO  (qtp1446922577-25) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=14
+2021-02-10 21:05:03.902 INFO  (qtp1446922577-41) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=23
+2021-02-10 21:05:03.992 INFO  (qtp1446922577-24) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=1
+2021-02-10 21:05:07.762 INFO  (qtp1446922577-25) [   x:directory] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at /var/solr/data/directory/conf/managed-schema
+2021-02-10 21:05:07.860 INFO  (qtp1446922577-25) [   x:directory] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.6.3
+2021-02-10 21:05:07.907 INFO  (qtp1446922577-25) [   x:directory] o.a.s.s.IndexSchema Schema name=default-config
+2021-02-10 21:05:08.051 WARN  (qtp1446922577-25) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitNorms to be specified in schema, hardcoded behavior is omitNorms=true
+2021-02-10 21:05:08.051 WARN  (qtp1446922577-25) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitTermFreqAndPositions to be specified in schema, hardcoded behavior is omitTermFreqAndPositions=true
+2021-02-10 21:05:08.051 WARN  (qtp1446922577-25) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termOffsets to be specified in schema, hardcoded behavior is termOffsets=false
+2021-02-10 21:05:08.051 WARN  (qtp1446922577-25) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termPositions to be specified in schema, hardcoded behavior is termPositions=false
+2021-02-10 21:05:08.051 WARN  (qtp1446922577-25) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitPositions to be specified in schema, hardcoded behavior is omitPositions=true
+2021-02-10 21:05:08.485 INFO  (qtp1446922577-25) [   x:directory] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2021-02-10 21:05:08.796 INFO  (qtp1446922577-25) [   x:directory] o.a.s.c.CoreContainer Reloading SolrCore 'directory' using configuration from instancedir /var/solr/data/directory
+2021-02-10 21:05:08.813 INFO  (qtp1446922577-25) [   x:directory] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.directory' (registry 'solr.core.directory') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@6fa51cd4
+2021-02-10 21:05:08.813 INFO  (qtp1446922577-25) [   x:directory] o.a.s.c.SolrCore [[directory] ] Opening new SolrCore at [/var/solr/data/directory], dataDir=[/var/solr/data/directory/data/]
+2021-02-10 21:05:08.885 INFO  (qtp1446922577-25) [   x:directory] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2021-02-10 21:05:08.885 INFO  (qtp1446922577-25) [   x:directory] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2021-02-10 21:05:08.893 INFO  (qtp1446922577-25) [   x:directory] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/solr/data/directory/conf
+2021-02-10 21:05:08.894 INFO  (qtp1446922577-25) [   x:directory] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2021-02-10 21:05:08.895 INFO  (qtp1446922577-25) [   x:directory] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2021-02-10 21:05:08.896 INFO  (qtp1446922577-25) [   x:directory] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2021-02-10 21:05:08.897 INFO  (qtp1446922577-25) [   x:directory] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1691343765002780672
+2021-02-10 21:05:08.899 INFO  (searcherExecutor-36-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:05:08.899 INFO  (searcherExecutor-36-thread-1-processing-x:directory) [   x:directory] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2021-02-10 21:05:08.906 INFO  (searcherExecutor-36-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 0 ms
+2021-02-10 21:05:08.940 INFO  (qtp1446922577-25) [   x:directory] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2021-02-10 21:05:08.943 INFO  (searcherExecutor-36-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:05:08.943 INFO  (qtp1446922577-25) [   ] o.a.s.c.S.Request [directory]  webapp=/solr path=/schema params={wt=json&_=1612990937257} status=0 QTime=1464
+2021-02-10 21:05:08.943 INFO  (qtp1446922577-25) [   ] o.a.s.c.SolrCore [directory]  CLOSING SolrCore org.apache.solr.core.SolrCore@698c5545
+2021-02-10 21:05:08.943 INFO  (qtp1446922577-25) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.directory tag=SolrCore@698c5545
+2021-02-10 21:05:08.943 INFO  (qtp1446922577-25) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@7f33b088: rootName = null, domain = solr.core.directory, service url = null, agent id = null] for registry solr.core.directory/com.codahale.metrics.MetricRegistry@651738ce
+2021-02-10 21:05:08.953 INFO  (searcherExecutor-36-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 0 ms
+2021-02-10 21:05:10.478 INFO  (qtp1446922577-18) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=1
+2021-02-10 21:05:10.483 INFO  (qtp1446922577-24) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=8
+2021-02-10 21:05:10.515 INFO  (qtp1446922577-25) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=2
+2021-02-10 21:05:24.141 INFO  (qtp1446922577-24) [   x:directory] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at /var/solr/data/directory/conf/managed-schema
+2021-02-10 21:05:24.236 INFO  (qtp1446922577-24) [   x:directory] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.6.3
+2021-02-10 21:05:24.275 INFO  (qtp1446922577-24) [   x:directory] o.a.s.s.IndexSchema Schema name=default-config
+2021-02-10 21:05:24.370 WARN  (qtp1446922577-24) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitNorms to be specified in schema, hardcoded behavior is omitNorms=true
+2021-02-10 21:05:24.370 WARN  (qtp1446922577-24) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitTermFreqAndPositions to be specified in schema, hardcoded behavior is omitTermFreqAndPositions=true
+2021-02-10 21:05:24.370 WARN  (qtp1446922577-24) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termOffsets to be specified in schema, hardcoded behavior is termOffsets=false
+2021-02-10 21:05:24.370 WARN  (qtp1446922577-24) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termPositions to be specified in schema, hardcoded behavior is termPositions=false
+2021-02-10 21:05:24.370 WARN  (qtp1446922577-24) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitPositions to be specified in schema, hardcoded behavior is omitPositions=true
+2021-02-10 21:05:24.659 INFO  (qtp1446922577-24) [   x:directory] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2021-02-10 21:05:24.937 INFO  (qtp1446922577-24) [   x:directory] o.a.s.c.CoreContainer Reloading SolrCore 'directory' using configuration from instancedir /var/solr/data/directory
+2021-02-10 21:05:24.952 INFO  (qtp1446922577-24) [   x:directory] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.directory' (registry 'solr.core.directory') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@6fa51cd4
+2021-02-10 21:05:24.953 INFO  (qtp1446922577-24) [   x:directory] o.a.s.c.SolrCore [[directory] ] Opening new SolrCore at [/var/solr/data/directory], dataDir=[/var/solr/data/directory/data/]
+2021-02-10 21:05:25.003 INFO  (qtp1446922577-24) [   x:directory] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2021-02-10 21:05:25.004 INFO  (qtp1446922577-24) [   x:directory] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2021-02-10 21:05:25.012 INFO  (qtp1446922577-24) [   x:directory] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/solr/data/directory/conf
+2021-02-10 21:05:25.013 INFO  (qtp1446922577-24) [   x:directory] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2021-02-10 21:05:25.014 INFO  (qtp1446922577-24) [   x:directory] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2021-02-10 21:05:25.015 INFO  (qtp1446922577-24) [   x:directory] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2021-02-10 21:05:25.015 INFO  (qtp1446922577-24) [   x:directory] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1691343781903728640
+2021-02-10 21:05:25.018 INFO  (searcherExecutor-41-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:05:25.018 INFO  (searcherExecutor-41-thread-1-processing-x:directory) [   x:directory] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2021-02-10 21:05:25.023 INFO  (searcherExecutor-41-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 0 ms
+2021-02-10 21:05:25.064 INFO  (qtp1446922577-24) [   x:directory] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2021-02-10 21:05:25.066 INFO  (searcherExecutor-41-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:05:25.066 INFO  (qtp1446922577-24) [   ] o.a.s.c.S.Request [directory]  webapp=/solr path=/schema params={wt=json&_=1612990937257} status=0 QTime=1241
+2021-02-10 21:05:25.066 INFO  (qtp1446922577-24) [   ] o.a.s.c.SolrCore [directory]  CLOSING SolrCore org.apache.solr.core.SolrCore@44f019b4
+2021-02-10 21:05:25.066 INFO  (qtp1446922577-24) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.directory tag=SolrCore@44f019b4
+2021-02-10 21:05:25.066 INFO  (qtp1446922577-24) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@25690c19: rootName = null, domain = solr.core.directory, service url = null, agent id = null] for registry solr.core.directory/com.codahale.metrics.MetricRegistry@651738ce
+2021-02-10 21:05:25.070 INFO  (searcherExecutor-41-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 0 ms
+2021-02-10 21:05:26.662 INFO  (qtp1446922577-25) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=1
+2021-02-10 21:05:26.673 INFO  (qtp1446922577-21) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=2
+2021-02-10 21:05:26.681 INFO  (qtp1446922577-23) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=15
+2021-02-10 21:05:26.683 INFO  (qtp1446922577-41) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=19
+2021-02-10 21:05:26.779 INFO  (qtp1446922577-25) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=3
+2021-02-10 21:05:33.816 INFO  (qtp1446922577-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=0
+2021-02-10 21:05:33.828 INFO  (qtp1446922577-22) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=5
+2021-02-10 21:05:33.832 INFO  (qtp1446922577-24) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=1
+2021-02-10 21:05:33.840 INFO  (qtp1446922577-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=22
+2021-02-10 21:05:33.913 INFO  (qtp1446922577-23) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=1
+2021-02-10 21:05:38.878 INFO  (qtp1446922577-22) [   x:directory] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at /var/solr/data/directory/conf/managed-schema
+2021-02-10 21:05:39.031 INFO  (qtp1446922577-22) [   x:directory] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.6.3
+2021-02-10 21:05:39.105 INFO  (qtp1446922577-22) [   x:directory] o.a.s.s.IndexSchema Schema name=default-config
+2021-02-10 21:05:39.222 WARN  (qtp1446922577-22) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitNorms to be specified in schema, hardcoded behavior is omitNorms=true
+2021-02-10 21:05:39.222 WARN  (qtp1446922577-22) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitTermFreqAndPositions to be specified in schema, hardcoded behavior is omitTermFreqAndPositions=true
+2021-02-10 21:05:39.222 WARN  (qtp1446922577-22) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termOffsets to be specified in schema, hardcoded behavior is termOffsets=false
+2021-02-10 21:05:39.222 WARN  (qtp1446922577-22) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termPositions to be specified in schema, hardcoded behavior is termPositions=false
+2021-02-10 21:05:39.222 WARN  (qtp1446922577-22) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitPositions to be specified in schema, hardcoded behavior is omitPositions=true
+2021-02-10 21:05:39.504 INFO  (qtp1446922577-22) [   x:directory] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2021-02-10 21:05:39.797 INFO  (qtp1446922577-22) [   x:directory] o.a.s.c.CoreContainer Reloading SolrCore 'directory' using configuration from instancedir /var/solr/data/directory
+2021-02-10 21:05:39.820 INFO  (qtp1446922577-22) [   x:directory] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.directory' (registry 'solr.core.directory') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@6fa51cd4
+2021-02-10 21:05:39.820 INFO  (qtp1446922577-22) [   x:directory] o.a.s.c.SolrCore [[directory] ] Opening new SolrCore at [/var/solr/data/directory], dataDir=[/var/solr/data/directory/data/]
+2021-02-10 21:05:39.885 INFO  (qtp1446922577-22) [   x:directory] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2021-02-10 21:05:39.886 INFO  (qtp1446922577-22) [   x:directory] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2021-02-10 21:05:39.893 INFO  (qtp1446922577-22) [   x:directory] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/solr/data/directory/conf
+2021-02-10 21:05:39.895 INFO  (qtp1446922577-22) [   x:directory] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2021-02-10 21:05:39.895 INFO  (qtp1446922577-22) [   x:directory] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2021-02-10 21:05:39.896 INFO  (qtp1446922577-22) [   x:directory] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2021-02-10 21:05:39.896 INFO  (qtp1446922577-22) [   x:directory] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1691343797507588096
+2021-02-10 21:05:39.899 INFO  (searcherExecutor-46-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:05:39.899 INFO  (searcherExecutor-46-thread-1-processing-x:directory) [   x:directory] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2021-02-10 21:05:39.910 INFO  (searcherExecutor-46-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 0 ms
+2021-02-10 21:05:39.949 INFO  (qtp1446922577-22) [   x:directory] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2021-02-10 21:05:39.954 INFO  (searcherExecutor-46-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:05:39.955 INFO  (qtp1446922577-22) [   ] o.a.s.c.S.Request [directory]  webapp=/solr path=/schema params={wt=json&_=1612990937257} status=0 QTime=1347
+2021-02-10 21:05:39.956 INFO  (qtp1446922577-22) [   ] o.a.s.c.SolrCore [directory]  CLOSING SolrCore org.apache.solr.core.SolrCore@b4e95d9
+2021-02-10 21:05:39.956 INFO  (qtp1446922577-22) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.directory tag=SolrCore@b4e95d9
+2021-02-10 21:05:39.956 INFO  (qtp1446922577-22) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@65c1ee99: rootName = null, domain = solr.core.directory, service url = null, agent id = null] for registry solr.core.directory/com.codahale.metrics.MetricRegistry@651738ce
+2021-02-10 21:05:39.962 INFO  (searcherExecutor-46-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 0 ms
+2021-02-10 21:05:41.503 INFO  (qtp1446922577-41) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=1
+2021-02-10 21:05:41.509 INFO  (qtp1446922577-23) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=7
+2021-02-10 21:05:41.543 INFO  (qtp1446922577-22) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=1
+2021-02-10 21:05:47.045 INFO  (qtp1446922577-23) [   x:directory] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at /var/solr/data/directory/conf/managed-schema
+2021-02-10 21:05:47.133 INFO  (qtp1446922577-23) [   x:directory] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.6.3
+2021-02-10 21:05:47.178 INFO  (qtp1446922577-23) [   x:directory] o.a.s.s.IndexSchema Schema name=default-config
+2021-02-10 21:05:47.360 WARN  (qtp1446922577-23) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitNorms to be specified in schema, hardcoded behavior is omitNorms=true
+2021-02-10 21:05:47.360 WARN  (qtp1446922577-23) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitTermFreqAndPositions to be specified in schema, hardcoded behavior is omitTermFreqAndPositions=true
+2021-02-10 21:05:47.360 WARN  (qtp1446922577-23) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termOffsets to be specified in schema, hardcoded behavior is termOffsets=false
+2021-02-10 21:05:47.361 WARN  (qtp1446922577-23) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termPositions to be specified in schema, hardcoded behavior is termPositions=false
+2021-02-10 21:05:47.361 WARN  (qtp1446922577-23) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitPositions to be specified in schema, hardcoded behavior is omitPositions=true
+2021-02-10 21:05:47.661 INFO  (qtp1446922577-23) [   x:directory] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2021-02-10 21:05:47.936 INFO  (qtp1446922577-23) [   x:directory] o.a.s.c.CoreContainer Reloading SolrCore 'directory' using configuration from instancedir /var/solr/data/directory
+2021-02-10 21:05:47.947 INFO  (qtp1446922577-23) [   x:directory] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.directory' (registry 'solr.core.directory') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@6fa51cd4
+2021-02-10 21:05:47.948 INFO  (qtp1446922577-23) [   x:directory] o.a.s.c.SolrCore [[directory] ] Opening new SolrCore at [/var/solr/data/directory], dataDir=[/var/solr/data/directory/data/]
+2021-02-10 21:05:47.997 INFO  (qtp1446922577-23) [   x:directory] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2021-02-10 21:05:47.997 INFO  (qtp1446922577-23) [   x:directory] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2021-02-10 21:05:48.007 INFO  (qtp1446922577-23) [   x:directory] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/solr/data/directory/conf
+2021-02-10 21:05:48.008 INFO  (qtp1446922577-23) [   x:directory] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2021-02-10 21:05:48.008 INFO  (qtp1446922577-23) [   x:directory] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2021-02-10 21:05:48.010 INFO  (qtp1446922577-23) [   x:directory] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2021-02-10 21:05:48.011 INFO  (qtp1446922577-23) [   x:directory] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1691343806016782336
+2021-02-10 21:05:48.013 INFO  (searcherExecutor-51-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:05:48.014 INFO  (searcherExecutor-51-thread-1-processing-x:directory) [   x:directory] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2021-02-10 21:05:48.019 INFO  (searcherExecutor-51-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 0 ms
+2021-02-10 21:05:48.053 INFO  (qtp1446922577-23) [   x:directory] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2021-02-10 21:05:48.055 INFO  (searcherExecutor-51-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:05:48.055 INFO  (qtp1446922577-23) [   ] o.a.s.c.S.Request [directory]  webapp=/solr path=/schema params={wt=json&_=1612990937257} status=0 QTime=1291
+2021-02-10 21:05:48.055 INFO  (qtp1446922577-23) [   ] o.a.s.c.SolrCore [directory]  CLOSING SolrCore org.apache.solr.core.SolrCore@40bd5ad7
+2021-02-10 21:05:48.055 INFO  (qtp1446922577-23) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.directory tag=SolrCore@40bd5ad7
+2021-02-10 21:05:48.055 INFO  (qtp1446922577-23) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@783d64ed: rootName = null, domain = solr.core.directory, service url = null, agent id = null] for registry solr.core.directory/com.codahale.metrics.MetricRegistry@651738ce
+2021-02-10 21:05:48.058 INFO  (searcherExecutor-51-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 0 ms
+2021-02-10 21:05:49.645 INFO  (qtp1446922577-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=0
+2021-02-10 21:05:49.658 INFO  (qtp1446922577-25) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=0
+2021-02-10 21:05:49.665 INFO  (qtp1446922577-21) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=7
+2021-02-10 21:05:49.668 INFO  (qtp1446922577-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=23
+2021-02-10 21:05:49.756 INFO  (qtp1446922577-22) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=2
+2021-02-10 21:05:54.741 INFO  (qtp1446922577-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=0
+2021-02-10 21:05:54.753 INFO  (qtp1446922577-41) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=1
+2021-02-10 21:05:54.755 INFO  (qtp1446922577-24) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=10
+2021-02-10 21:05:54.768 INFO  (qtp1446922577-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=27
+2021-02-10 21:05:54.853 INFO  (qtp1446922577-25) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=2
+2021-02-10 21:06:07.416 INFO  (qtp1446922577-24) [   x:directory] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at /var/solr/data/directory/conf/managed-schema
+2021-02-10 21:06:07.509 INFO  (qtp1446922577-24) [   x:directory] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.6.3
+2021-02-10 21:06:07.551 INFO  (qtp1446922577-24) [   x:directory] o.a.s.s.IndexSchema Schema name=default-config
+2021-02-10 21:06:07.656 WARN  (qtp1446922577-24) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitNorms to be specified in schema, hardcoded behavior is omitNorms=true
+2021-02-10 21:06:07.656 WARN  (qtp1446922577-24) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitTermFreqAndPositions to be specified in schema, hardcoded behavior is omitTermFreqAndPositions=true
+2021-02-10 21:06:07.656 WARN  (qtp1446922577-24) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termOffsets to be specified in schema, hardcoded behavior is termOffsets=false
+2021-02-10 21:06:07.656 WARN  (qtp1446922577-24) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termPositions to be specified in schema, hardcoded behavior is termPositions=false
+2021-02-10 21:06:07.656 WARN  (qtp1446922577-24) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitPositions to be specified in schema, hardcoded behavior is omitPositions=true
+2021-02-10 21:06:07.998 INFO  (qtp1446922577-24) [   x:directory] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2021-02-10 21:06:08.465 INFO  (qtp1446922577-24) [   x:directory] o.a.s.c.CoreContainer Reloading SolrCore 'directory' using configuration from instancedir /var/solr/data/directory
+2021-02-10 21:06:08.474 INFO  (qtp1446922577-24) [   x:directory] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.directory' (registry 'solr.core.directory') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@6fa51cd4
+2021-02-10 21:06:08.474 INFO  (qtp1446922577-24) [   x:directory] o.a.s.c.SolrCore [[directory] ] Opening new SolrCore at [/var/solr/data/directory], dataDir=[/var/solr/data/directory/data/]
+2021-02-10 21:06:08.526 INFO  (qtp1446922577-24) [   x:directory] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2021-02-10 21:06:08.527 INFO  (qtp1446922577-24) [   x:directory] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2021-02-10 21:06:08.534 INFO  (qtp1446922577-24) [   x:directory] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/solr/data/directory/conf
+2021-02-10 21:06:08.536 INFO  (qtp1446922577-24) [   x:directory] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2021-02-10 21:06:08.536 INFO  (qtp1446922577-24) [   x:directory] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2021-02-10 21:06:08.537 INFO  (qtp1446922577-24) [   x:directory] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2021-02-10 21:06:08.537 INFO  (qtp1446922577-24) [   x:directory] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1691343827539853312
+2021-02-10 21:06:08.540 INFO  (searcherExecutor-56-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:06:08.540 INFO  (searcherExecutor-56-thread-1-processing-x:directory) [   x:directory] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2021-02-10 21:06:08.542 INFO  (searcherExecutor-56-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 0 ms
+2021-02-10 21:06:08.586 INFO  (qtp1446922577-24) [   x:directory] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2021-02-10 21:06:08.588 INFO  (searcherExecutor-56-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:06:08.588 INFO  (qtp1446922577-24) [   ] o.a.s.c.S.Request [directory]  webapp=/solr path=/schema params={wt=json&_=1612990937257} status=0 QTime=1451
+2021-02-10 21:06:08.589 INFO  (qtp1446922577-24) [   ] o.a.s.c.SolrCore [directory]  CLOSING SolrCore org.apache.solr.core.SolrCore@45dda815
+2021-02-10 21:06:08.589 INFO  (qtp1446922577-24) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.directory tag=SolrCore@45dda815
+2021-02-10 21:06:08.589 INFO  (qtp1446922577-24) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@49faa22a: rootName = null, domain = solr.core.directory, service url = null, agent id = null] for registry solr.core.directory/com.codahale.metrics.MetricRegistry@651738ce
+2021-02-10 21:06:08.596 INFO  (searcherExecutor-56-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 0 ms
+2021-02-10 21:06:10.125 INFO  (qtp1446922577-18) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=1
+2021-02-10 21:06:10.131 INFO  (qtp1446922577-25) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=11
+2021-02-10 21:06:10.168 INFO  (qtp1446922577-24) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=2
+2021-02-10 21:06:13.983 INFO  (qtp1446922577-25) [   x:directory] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at /var/solr/data/directory/conf/managed-schema
+2021-02-10 21:06:14.068 INFO  (qtp1446922577-25) [   x:directory] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.6.3
+2021-02-10 21:06:14.105 INFO  (qtp1446922577-25) [   x:directory] o.a.s.s.IndexSchema Schema name=default-config
+2021-02-10 21:06:14.198 WARN  (qtp1446922577-25) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitNorms to be specified in schema, hardcoded behavior is omitNorms=true
+2021-02-10 21:06:14.198 WARN  (qtp1446922577-25) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitTermFreqAndPositions to be specified in schema, hardcoded behavior is omitTermFreqAndPositions=true
+2021-02-10 21:06:14.198 WARN  (qtp1446922577-25) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termOffsets to be specified in schema, hardcoded behavior is termOffsets=false
+2021-02-10 21:06:14.198 WARN  (qtp1446922577-25) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termPositions to be specified in schema, hardcoded behavior is termPositions=false
+2021-02-10 21:06:14.198 WARN  (qtp1446922577-25) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitPositions to be specified in schema, hardcoded behavior is omitPositions=true
+2021-02-10 21:06:14.494 INFO  (qtp1446922577-25) [   x:directory] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2021-02-10 21:06:14.783 INFO  (qtp1446922577-25) [   x:directory] o.a.s.c.CoreContainer Reloading SolrCore 'directory' using configuration from instancedir /var/solr/data/directory
+2021-02-10 21:06:14.793 INFO  (qtp1446922577-25) [   x:directory] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.directory' (registry 'solr.core.directory') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@6fa51cd4
+2021-02-10 21:06:14.793 INFO  (qtp1446922577-25) [   x:directory] o.a.s.c.SolrCore [[directory] ] Opening new SolrCore at [/var/solr/data/directory], dataDir=[/var/solr/data/directory/data/]
+2021-02-10 21:06:14.843 INFO  (qtp1446922577-25) [   x:directory] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2021-02-10 21:06:14.844 INFO  (qtp1446922577-25) [   x:directory] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2021-02-10 21:06:14.851 INFO  (qtp1446922577-25) [   x:directory] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/solr/data/directory/conf
+2021-02-10 21:06:14.853 INFO  (qtp1446922577-25) [   x:directory] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2021-02-10 21:06:14.853 INFO  (qtp1446922577-25) [   x:directory] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2021-02-10 21:06:14.854 INFO  (qtp1446922577-25) [   x:directory] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2021-02-10 21:06:14.854 INFO  (qtp1446922577-25) [   x:directory] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1691343834163707904
+2021-02-10 21:06:14.857 INFO  (searcherExecutor-61-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:06:14.857 INFO  (searcherExecutor-61-thread-1-processing-x:directory) [   x:directory] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2021-02-10 21:06:14.861 INFO  (searcherExecutor-61-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 0 ms
+2021-02-10 21:06:14.903 INFO  (qtp1446922577-25) [   x:directory] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2021-02-10 21:06:14.905 INFO  (qtp1446922577-25) [   ] o.a.s.c.S.Request [directory]  webapp=/solr path=/schema params={wt=json&_=1612990937257} status=0 QTime=1242
+2021-02-10 21:06:14.905 INFO  (searcherExecutor-61-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:06:14.905 INFO  (qtp1446922577-25) [   ] o.a.s.c.SolrCore [directory]  CLOSING SolrCore org.apache.solr.core.SolrCore@3e32a3c0
+2021-02-10 21:06:14.905 INFO  (qtp1446922577-25) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.directory tag=SolrCore@3e32a3c0
+2021-02-10 21:06:14.905 INFO  (qtp1446922577-25) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@2e045cc2: rootName = null, domain = solr.core.directory, service url = null, agent id = null] for registry solr.core.directory/com.codahale.metrics.MetricRegistry@651738ce
+2021-02-10 21:06:14.908 INFO  (searcherExecutor-61-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 0 ms
+2021-02-10 21:06:16.460 INFO  (qtp1446922577-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=0
+2021-02-10 21:06:16.465 INFO  (qtp1446922577-22) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=1
+2021-02-10 21:06:16.468 INFO  (qtp1446922577-21) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=4
+2021-02-10 21:06:16.470 INFO  (qtp1446922577-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=9
+2021-02-10 21:06:16.565 INFO  (qtp1446922577-24) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=1
+2021-02-10 21:06:41.839 INFO  (qtp1446922577-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=0
+2021-02-10 21:06:41.846 INFO  (qtp1446922577-25) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=1
+2021-02-10 21:06:41.857 INFO  (qtp1446922577-41) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=14
+2021-02-10 21:06:41.857 INFO  (qtp1446922577-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=18
+2021-02-10 21:06:41.960 INFO  (qtp1446922577-22) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=1
+2021-02-10 21:06:48.464 INFO  (qtp1446922577-41) [   x:directory] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at /var/solr/data/directory/conf/managed-schema
+2021-02-10 21:06:48.558 INFO  (qtp1446922577-41) [   x:directory] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.6.3
+2021-02-10 21:06:48.602 INFO  (qtp1446922577-41) [   x:directory] o.a.s.s.IndexSchema Schema name=default-config
+2021-02-10 21:06:48.719 WARN  (qtp1446922577-41) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitNorms to be specified in schema, hardcoded behavior is omitNorms=true
+2021-02-10 21:06:48.719 WARN  (qtp1446922577-41) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitTermFreqAndPositions to be specified in schema, hardcoded behavior is omitTermFreqAndPositions=true
+2021-02-10 21:06:48.719 WARN  (qtp1446922577-41) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termOffsets to be specified in schema, hardcoded behavior is termOffsets=false
+2021-02-10 21:06:48.719 WARN  (qtp1446922577-41) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termPositions to be specified in schema, hardcoded behavior is termPositions=false
+2021-02-10 21:06:48.719 WARN  (qtp1446922577-41) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitPositions to be specified in schema, hardcoded behavior is omitPositions=true
+2021-02-10 21:06:48.954 INFO  (qtp1446922577-41) [   x:directory] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2021-02-10 21:06:49.197 INFO  (qtp1446922577-41) [   x:directory] o.a.s.c.CoreContainer Reloading SolrCore 'directory' using configuration from instancedir /var/solr/data/directory
+2021-02-10 21:06:49.207 INFO  (qtp1446922577-41) [   x:directory] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.directory' (registry 'solr.core.directory') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@6fa51cd4
+2021-02-10 21:06:49.208 INFO  (qtp1446922577-41) [   x:directory] o.a.s.c.SolrCore [[directory] ] Opening new SolrCore at [/var/solr/data/directory], dataDir=[/var/solr/data/directory/data/]
+2021-02-10 21:06:49.255 INFO  (qtp1446922577-41) [   x:directory] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2021-02-10 21:06:49.255 INFO  (qtp1446922577-41) [   x:directory] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2021-02-10 21:06:49.260 INFO  (qtp1446922577-41) [   x:directory] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/solr/data/directory/conf
+2021-02-10 21:06:49.262 INFO  (qtp1446922577-41) [   x:directory] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2021-02-10 21:06:49.262 INFO  (qtp1446922577-41) [   x:directory] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2021-02-10 21:06:49.263 INFO  (qtp1446922577-41) [   x:directory] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2021-02-10 21:06:49.264 INFO  (qtp1446922577-41) [   x:directory] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1691343870245208064
+2021-02-10 21:06:49.265 INFO  (searcherExecutor-66-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:06:49.266 INFO  (searcherExecutor-66-thread-1-processing-x:directory) [   x:directory] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2021-02-10 21:06:49.268 INFO  (searcherExecutor-66-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 0 ms
+2021-02-10 21:06:49.300 INFO  (qtp1446922577-41) [   x:directory] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2021-02-10 21:06:49.301 INFO  (qtp1446922577-41) [   ] o.a.s.c.S.Request [directory]  webapp=/solr path=/schema params={wt=json&_=1612990937257} status=0 QTime=1124
+2021-02-10 21:06:49.301 INFO  (searcherExecutor-66-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:06:49.302 INFO  (qtp1446922577-41) [   ] o.a.s.c.SolrCore [directory]  CLOSING SolrCore org.apache.solr.core.SolrCore@50b509f6
+2021-02-10 21:06:49.302 INFO  (qtp1446922577-41) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.directory tag=SolrCore@50b509f6
+2021-02-10 21:06:49.302 INFO  (qtp1446922577-41) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@30542157: rootName = null, domain = solr.core.directory, service url = null, agent id = null] for registry solr.core.directory/com.codahale.metrics.MetricRegistry@651738ce
+2021-02-10 21:06:49.303 INFO  (searcherExecutor-66-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 0 ms
+2021-02-10 21:06:50.837 INFO  (qtp1446922577-24) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=3
+2021-02-10 21:06:50.844 INFO  (qtp1446922577-22) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=11
+2021-02-10 21:06:50.881 INFO  (qtp1446922577-41) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=1
+2021-02-10 21:06:58.044 INFO  (qtp1446922577-22) [   x:directory] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at /var/solr/data/directory/conf/managed-schema
+2021-02-10 21:06:58.159 INFO  (qtp1446922577-22) [   x:directory] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.6.3
+2021-02-10 21:06:58.192 INFO  (qtp1446922577-22) [   x:directory] o.a.s.s.IndexSchema Schema name=default-config
+2021-02-10 21:06:58.306 WARN  (qtp1446922577-22) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitNorms to be specified in schema, hardcoded behavior is omitNorms=true
+2021-02-10 21:06:58.306 WARN  (qtp1446922577-22) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitTermFreqAndPositions to be specified in schema, hardcoded behavior is omitTermFreqAndPositions=true
+2021-02-10 21:06:58.306 WARN  (qtp1446922577-22) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termOffsets to be specified in schema, hardcoded behavior is termOffsets=false
+2021-02-10 21:06:58.306 WARN  (qtp1446922577-22) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termPositions to be specified in schema, hardcoded behavior is termPositions=false
+2021-02-10 21:06:58.306 WARN  (qtp1446922577-22) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitPositions to be specified in schema, hardcoded behavior is omitPositions=true
+2021-02-10 21:06:58.569 INFO  (qtp1446922577-22) [   x:directory] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2021-02-10 21:06:58.820 INFO  (qtp1446922577-22) [   x:directory] o.a.s.c.CoreContainer Reloading SolrCore 'directory' using configuration from instancedir /var/solr/data/directory
+2021-02-10 21:06:58.830 INFO  (qtp1446922577-22) [   x:directory] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.directory' (registry 'solr.core.directory') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@6fa51cd4
+2021-02-10 21:06:58.830 INFO  (qtp1446922577-22) [   x:directory] o.a.s.c.SolrCore [[directory] ] Opening new SolrCore at [/var/solr/data/directory], dataDir=[/var/solr/data/directory/data/]
+2021-02-10 21:06:58.869 INFO  (qtp1446922577-22) [   x:directory] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2021-02-10 21:06:58.869 INFO  (qtp1446922577-22) [   x:directory] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2021-02-10 21:06:58.876 INFO  (qtp1446922577-22) [   x:directory] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/solr/data/directory/conf
+2021-02-10 21:06:58.878 INFO  (qtp1446922577-22) [   x:directory] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2021-02-10 21:06:58.878 INFO  (qtp1446922577-22) [   x:directory] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2021-02-10 21:06:58.879 INFO  (qtp1446922577-22) [   x:directory] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2021-02-10 21:06:58.879 INFO  (qtp1446922577-22) [   x:directory] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1691343880327266304
+2021-02-10 21:06:58.881 INFO  (searcherExecutor-71-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:06:58.882 INFO  (searcherExecutor-71-thread-1-processing-x:directory) [   x:directory] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2021-02-10 21:06:58.884 INFO  (searcherExecutor-71-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 0 ms
+2021-02-10 21:06:58.914 INFO  (qtp1446922577-22) [   x:directory] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2021-02-10 21:06:58.915 INFO  (searcherExecutor-71-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:06:58.915 INFO  (qtp1446922577-22) [   ] o.a.s.c.S.Request [directory]  webapp=/solr path=/schema params={wt=json&_=1612990937257} status=0 QTime=1197
+2021-02-10 21:06:58.915 INFO  (qtp1446922577-22) [   ] o.a.s.c.SolrCore [directory]  CLOSING SolrCore org.apache.solr.core.SolrCore@6984a1da
+2021-02-10 21:06:58.915 INFO  (qtp1446922577-22) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.directory tag=SolrCore@6984a1da
+2021-02-10 21:06:58.915 INFO  (qtp1446922577-22) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@72da78fc: rootName = null, domain = solr.core.directory, service url = null, agent id = null] for registry solr.core.directory/com.codahale.metrics.MetricRegistry@651738ce
+2021-02-10 21:06:58.917 INFO  (searcherExecutor-71-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 0 ms
+2021-02-10 21:07:00.501 INFO  (qtp1446922577-41) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=0
+2021-02-10 21:07:00.508 INFO  (qtp1446922577-65) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=0
+2021-02-10 21:07:00.512 INFO  (qtp1446922577-21) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=10
+2021-02-10 21:07:00.531 INFO  (qtp1446922577-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=27
+2021-02-10 21:07:00.602 INFO  (qtp1446922577-25) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=1
+2021-02-10 21:07:50.983 INFO  (qtp1446922577-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=0
+2021-02-10 21:07:50.994 INFO  (qtp1446922577-22) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=1
+2021-02-10 21:07:50.998 INFO  (qtp1446922577-23) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=14
+2021-02-10 21:07:51.002 INFO  (qtp1446922577-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=19
+2021-02-10 21:07:51.117 INFO  (qtp1446922577-17) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=2
+2021-02-10 21:07:57.430 INFO  (qtp1446922577-23) [   x:directory] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at /var/solr/data/directory/conf/managed-schema
+2021-02-10 21:07:57.520 INFO  (qtp1446922577-23) [   x:directory] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.6.3
+2021-02-10 21:07:57.557 INFO  (qtp1446922577-23) [   x:directory] o.a.s.s.IndexSchema Schema name=default-config
+2021-02-10 21:07:57.655 WARN  (qtp1446922577-23) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitNorms to be specified in schema, hardcoded behavior is omitNorms=true
+2021-02-10 21:07:57.655 WARN  (qtp1446922577-23) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitTermFreqAndPositions to be specified in schema, hardcoded behavior is omitTermFreqAndPositions=true
+2021-02-10 21:07:57.655 WARN  (qtp1446922577-23) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termOffsets to be specified in schema, hardcoded behavior is termOffsets=false
+2021-02-10 21:07:57.655 WARN  (qtp1446922577-23) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termPositions to be specified in schema, hardcoded behavior is termPositions=false
+2021-02-10 21:07:57.655 WARN  (qtp1446922577-23) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitPositions to be specified in schema, hardcoded behavior is omitPositions=true
+2021-02-10 21:07:57.958 INFO  (qtp1446922577-23) [   x:directory] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2021-02-10 21:07:58.239 INFO  (qtp1446922577-23) [   x:directory] o.a.s.c.CoreContainer Reloading SolrCore 'directory' using configuration from instancedir /var/solr/data/directory
+2021-02-10 21:07:58.248 INFO  (qtp1446922577-23) [   x:directory] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.directory' (registry 'solr.core.directory') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@6fa51cd4
+2021-02-10 21:07:58.249 INFO  (qtp1446922577-23) [   x:directory] o.a.s.c.SolrCore [[directory] ] Opening new SolrCore at [/var/solr/data/directory], dataDir=[/var/solr/data/directory/data/]
+2021-02-10 21:07:58.294 INFO  (qtp1446922577-23) [   x:directory] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2021-02-10 21:07:58.295 INFO  (qtp1446922577-23) [   x:directory] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2021-02-10 21:07:58.303 INFO  (qtp1446922577-23) [   x:directory] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/solr/data/directory/conf
+2021-02-10 21:07:58.305 INFO  (qtp1446922577-23) [   x:directory] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2021-02-10 21:07:58.305 INFO  (qtp1446922577-23) [   x:directory] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2021-02-10 21:07:58.306 INFO  (qtp1446922577-23) [   x:directory] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2021-02-10 21:07:58.307 INFO  (qtp1446922577-23) [   x:directory] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1691343942642040832
+2021-02-10 21:07:58.309 INFO  (searcherExecutor-76-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:07:58.309 INFO  (searcherExecutor-76-thread-1-processing-x:directory) [   x:directory] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2021-02-10 21:07:58.311 INFO  (searcherExecutor-76-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 0 ms
+2021-02-10 21:07:58.344 INFO  (qtp1446922577-23) [   x:directory] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2021-02-10 21:07:58.345 INFO  (searcherExecutor-76-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:07:58.345 INFO  (qtp1446922577-23) [   ] o.a.s.c.S.Request [directory]  webapp=/solr path=/schema params={wt=json&_=1612990937257} status=0 QTime=1194
+2021-02-10 21:07:58.346 INFO  (qtp1446922577-23) [   ] o.a.s.c.SolrCore [directory]  CLOSING SolrCore org.apache.solr.core.SolrCore@d2efcca
+2021-02-10 21:07:58.346 INFO  (qtp1446922577-23) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.directory tag=SolrCore@d2efcca
+2021-02-10 21:07:58.346 INFO  (qtp1446922577-23) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@1230104f: rootName = null, domain = solr.core.directory, service url = null, agent id = null] for registry solr.core.directory/com.codahale.metrics.MetricRegistry@651738ce
+2021-02-10 21:07:58.347 INFO  (searcherExecutor-76-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 0 ms
+2021-02-10 21:07:59.878 INFO  (qtp1446922577-18) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=1
+2021-02-10 21:07:59.883 INFO  (qtp1446922577-17) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=9
+2021-02-10 21:07:59.929 INFO  (qtp1446922577-23) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=2
+2021-02-10 21:08:02.083 INFO  (qtp1446922577-17) [   x:directory] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at /var/solr/data/directory/conf/managed-schema
+2021-02-10 21:08:02.171 INFO  (qtp1446922577-17) [   x:directory] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.6.3
+2021-02-10 21:08:02.229 INFO  (qtp1446922577-17) [   x:directory] o.a.s.s.IndexSchema Schema name=default-config
+2021-02-10 21:08:02.312 WARN  (qtp1446922577-17) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitNorms to be specified in schema, hardcoded behavior is omitNorms=true
+2021-02-10 21:08:02.312 WARN  (qtp1446922577-17) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitTermFreqAndPositions to be specified in schema, hardcoded behavior is omitTermFreqAndPositions=true
+2021-02-10 21:08:02.312 WARN  (qtp1446922577-17) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termOffsets to be specified in schema, hardcoded behavior is termOffsets=false
+2021-02-10 21:08:02.312 WARN  (qtp1446922577-17) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termPositions to be specified in schema, hardcoded behavior is termPositions=false
+2021-02-10 21:08:02.312 WARN  (qtp1446922577-17) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitPositions to be specified in schema, hardcoded behavior is omitPositions=true
+2021-02-10 21:08:02.610 INFO  (qtp1446922577-17) [   x:directory] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2021-02-10 21:08:02.892 INFO  (qtp1446922577-17) [   x:directory] o.a.s.c.CoreContainer Reloading SolrCore 'directory' using configuration from instancedir /var/solr/data/directory
+2021-02-10 21:08:02.904 INFO  (qtp1446922577-17) [   x:directory] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.directory' (registry 'solr.core.directory') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@6fa51cd4
+2021-02-10 21:08:02.904 INFO  (qtp1446922577-17) [   x:directory] o.a.s.c.SolrCore [[directory] ] Opening new SolrCore at [/var/solr/data/directory], dataDir=[/var/solr/data/directory/data/]
+2021-02-10 21:08:02.949 INFO  (qtp1446922577-17) [   x:directory] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2021-02-10 21:08:02.949 INFO  (qtp1446922577-17) [   x:directory] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2021-02-10 21:08:02.960 INFO  (qtp1446922577-17) [   x:directory] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/solr/data/directory/conf
+2021-02-10 21:08:02.962 INFO  (qtp1446922577-17) [   x:directory] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2021-02-10 21:08:02.962 INFO  (qtp1446922577-17) [   x:directory] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2021-02-10 21:08:02.963 INFO  (qtp1446922577-17) [   x:directory] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2021-02-10 21:08:02.963 INFO  (qtp1446922577-17) [   x:directory] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1691343947524210688
+2021-02-10 21:08:02.965 INFO  (searcherExecutor-81-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:08:02.966 INFO  (searcherExecutor-81-thread-1-processing-x:directory) [   x:directory] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2021-02-10 21:08:02.968 INFO  (searcherExecutor-81-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 0 ms
+2021-02-10 21:08:03.005 INFO  (qtp1446922577-17) [   x:directory] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2021-02-10 21:08:03.007 INFO  (searcherExecutor-81-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:08:03.007 INFO  (qtp1446922577-17) [   ] o.a.s.c.S.Request [directory]  webapp=/solr path=/schema params={wt=json&_=1612990937257} status=0 QTime=1265
+2021-02-10 21:08:03.007 INFO  (qtp1446922577-17) [   ] o.a.s.c.SolrCore [directory]  CLOSING SolrCore org.apache.solr.core.SolrCore@37f8f01
+2021-02-10 21:08:03.007 INFO  (qtp1446922577-17) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.directory tag=SolrCore@37f8f01
+2021-02-10 21:08:03.007 INFO  (qtp1446922577-17) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@3ea67ab4: rootName = null, domain = solr.core.directory, service url = null, agent id = null] for registry solr.core.directory/com.codahale.metrics.MetricRegistry@651738ce
+2021-02-10 21:08:03.009 INFO  (searcherExecutor-81-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 0 ms
+2021-02-10 21:08:04.594 INFO  (qtp1446922577-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=0
+2021-02-10 21:08:04.604 INFO  (qtp1446922577-25) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=2
+2021-02-10 21:08:04.611 INFO  (qtp1446922577-21) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=15
+2021-02-10 21:08:04.613 INFO  (qtp1446922577-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=19
+2021-02-10 21:08:04.688 INFO  (qtp1446922577-22) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=1
+2021-02-10 21:08:08.963 INFO  (qtp1446922577-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=0
+2021-02-10 21:08:08.972 INFO  (qtp1446922577-17) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=1
+2021-02-10 21:08:08.975 INFO  (qtp1446922577-23) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=10
+2021-02-10 21:08:08.980 INFO  (qtp1446922577-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=16
+2021-02-10 21:08:09.067 INFO  (qtp1446922577-25) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=3
+2021-02-10 21:08:10.750 INFO  (qtp1446922577-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=0
+2021-02-10 21:08:10.762 INFO  (qtp1446922577-21) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=5
+2021-02-10 21:08:10.763 INFO  (qtp1446922577-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=12
+2021-02-10 21:08:10.763 INFO  (qtp1446922577-25) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=0
+2021-02-10 21:08:10.857 INFO  (qtp1446922577-23) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=2
+2021-02-10 21:08:14.858 INFO  (qtp1446922577-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=0
+2021-02-10 21:08:14.865 INFO  (qtp1446922577-22) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=2
+2021-02-10 21:08:14.874 INFO  (qtp1446922577-17) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=15
+2021-02-10 21:08:14.875 INFO  (qtp1446922577-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=17
+2021-02-10 21:08:14.958 INFO  (qtp1446922577-25) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=1
+2021-02-10 21:08:17.487 INFO  (qtp1446922577-17) [   x:directory] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at /var/solr/data/directory/conf/managed-schema
+2021-02-10 21:08:17.572 INFO  (qtp1446922577-17) [   x:directory] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.6.3
+2021-02-10 21:08:17.612 INFO  (qtp1446922577-17) [   x:directory] o.a.s.s.IndexSchema Schema name=default-config
+2021-02-10 21:08:17.736 WARN  (qtp1446922577-17) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitNorms to be specified in schema, hardcoded behavior is omitNorms=true
+2021-02-10 21:08:17.736 WARN  (qtp1446922577-17) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitTermFreqAndPositions to be specified in schema, hardcoded behavior is omitTermFreqAndPositions=true
+2021-02-10 21:08:17.736 WARN  (qtp1446922577-17) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termOffsets to be specified in schema, hardcoded behavior is termOffsets=false
+2021-02-10 21:08:17.736 WARN  (qtp1446922577-17) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termPositions to be specified in schema, hardcoded behavior is termPositions=false
+2021-02-10 21:08:17.736 WARN  (qtp1446922577-17) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitPositions to be specified in schema, hardcoded behavior is omitPositions=true
+2021-02-10 21:08:18.033 INFO  (qtp1446922577-17) [   x:directory] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2021-02-10 21:08:18.299 INFO  (qtp1446922577-17) [   x:directory] o.a.s.c.CoreContainer Reloading SolrCore 'directory' using configuration from instancedir /var/solr/data/directory
+2021-02-10 21:08:18.308 INFO  (qtp1446922577-17) [   x:directory] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.directory' (registry 'solr.core.directory') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@6fa51cd4
+2021-02-10 21:08:18.308 INFO  (qtp1446922577-17) [   x:directory] o.a.s.c.SolrCore [[directory] ] Opening new SolrCore at [/var/solr/data/directory], dataDir=[/var/solr/data/directory/data/]
+2021-02-10 21:08:18.343 INFO  (qtp1446922577-17) [   x:directory] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2021-02-10 21:08:18.343 INFO  (qtp1446922577-17) [   x:directory] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2021-02-10 21:08:18.350 INFO  (qtp1446922577-17) [   x:directory] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/solr/data/directory/conf
+2021-02-10 21:08:18.353 INFO  (qtp1446922577-17) [   x:directory] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2021-02-10 21:08:18.353 INFO  (qtp1446922577-17) [   x:directory] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2021-02-10 21:08:18.354 INFO  (qtp1446922577-17) [   x:directory] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2021-02-10 21:08:18.355 INFO  (qtp1446922577-17) [   x:directory] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1691343963663892480
+2021-02-10 21:08:18.357 INFO  (searcherExecutor-86-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:08:18.357 INFO  (searcherExecutor-86-thread-1-processing-x:directory) [   x:directory] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2021-02-10 21:08:18.359 INFO  (searcherExecutor-86-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 0 ms
+2021-02-10 21:08:18.397 INFO  (qtp1446922577-17) [   x:directory] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2021-02-10 21:08:18.399 INFO  (qtp1446922577-17) [   ] o.a.s.c.S.Request [directory]  webapp=/solr path=/schema params={wt=json&_=1612990937257} status=0 QTime=1188
+2021-02-10 21:08:18.399 INFO  (searcherExecutor-86-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:08:18.399 INFO  (qtp1446922577-17) [   ] o.a.s.c.SolrCore [directory]  CLOSING SolrCore org.apache.solr.core.SolrCore@459a1be4
+2021-02-10 21:08:18.399 INFO  (qtp1446922577-17) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.directory tag=SolrCore@459a1be4
+2021-02-10 21:08:18.399 INFO  (qtp1446922577-17) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@2ada03fa: rootName = null, domain = solr.core.directory, service url = null, agent id = null] for registry solr.core.directory/com.codahale.metrics.MetricRegistry@651738ce
+2021-02-10 21:08:18.400 INFO  (searcherExecutor-86-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 0 ms
+2021-02-10 21:08:19.937 INFO  (qtp1446922577-24) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=3
+2021-02-10 21:08:19.943 INFO  (qtp1446922577-25) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=9
+2021-02-10 21:08:19.981 INFO  (qtp1446922577-17) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=4
+2021-02-10 21:08:32.788 INFO  (qtp1446922577-25) [   x:directory] o.a.s.s.ManagedIndexSchema Upgraded to managed schema at /var/solr/data/directory/conf/managed-schema
+2021-02-10 21:08:32.880 INFO  (qtp1446922577-25) [   x:directory] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.6.3
+2021-02-10 21:08:32.914 INFO  (qtp1446922577-25) [   x:directory] o.a.s.s.IndexSchema Schema name=default-config
+2021-02-10 21:08:33.021 WARN  (qtp1446922577-25) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitNorms to be specified in schema, hardcoded behavior is omitNorms=true
+2021-02-10 21:08:33.021 WARN  (qtp1446922577-25) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitTermFreqAndPositions to be specified in schema, hardcoded behavior is omitTermFreqAndPositions=true
+2021-02-10 21:08:33.021 WARN  (qtp1446922577-25) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termOffsets to be specified in schema, hardcoded behavior is termOffsets=false
+2021-02-10 21:08:33.021 WARN  (qtp1446922577-25) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow termPositions to be specified in schema, hardcoded behavior is termPositions=false
+2021-02-10 21:08:33.021 WARN  (qtp1446922577-25) [   x:directory] o.a.s.s.AbstractSpatialPrefixTreeFieldType FieldType SpatialRecursivePrefixTreeFieldType does not allow omitPositions to be specified in schema, hardcoded behavior is omitPositions=true
+2021-02-10 21:08:33.320 INFO  (qtp1446922577-25) [   x:directory] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2021-02-10 21:08:33.606 INFO  (qtp1446922577-25) [   x:directory] o.a.s.c.CoreContainer Reloading SolrCore 'directory' using configuration from instancedir /var/solr/data/directory
+2021-02-10 21:08:33.617 INFO  (qtp1446922577-25) [   x:directory] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.directory' (registry 'solr.core.directory') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@6fa51cd4
+2021-02-10 21:08:33.617 INFO  (qtp1446922577-25) [   x:directory] o.a.s.c.SolrCore [[directory] ] Opening new SolrCore at [/var/solr/data/directory], dataDir=[/var/solr/data/directory/data/]
+2021-02-10 21:08:33.686 INFO  (qtp1446922577-25) [   x:directory] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2021-02-10 21:08:33.686 INFO  (qtp1446922577-25) [   x:directory] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2021-02-10 21:08:33.696 INFO  (qtp1446922577-25) [   x:directory] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/solr/data/directory/conf
+2021-02-10 21:08:33.698 INFO  (qtp1446922577-25) [   x:directory] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2021-02-10 21:08:33.700 INFO  (qtp1446922577-25) [   x:directory] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2021-02-10 21:08:33.703 INFO  (qtp1446922577-25) [   x:directory] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2021-02-10 21:08:33.704 INFO  (qtp1446922577-25) [   x:directory] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1691343979758485504
+2021-02-10 21:08:33.706 INFO  (searcherExecutor-91-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:08:33.706 INFO  (searcherExecutor-91-thread-1-processing-x:directory) [   x:directory] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2021-02-10 21:08:33.710 INFO  (searcherExecutor-91-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 0 ms
+2021-02-10 21:08:33.741 INFO  (qtp1446922577-25) [   x:directory] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2021-02-10 21:08:33.742 INFO  (searcherExecutor-91-thread-1-processing-x:directory) [   x:directory] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-02-10 21:08:33.742 INFO  (qtp1446922577-25) [   ] o.a.s.c.S.Request [directory]  webapp=/solr path=/schema params={wt=json&_=1612990937257} status=0 QTime=1231
+2021-02-10 21:08:33.742 INFO  (qtp1446922577-25) [   ] o.a.s.c.SolrCore [directory]  CLOSING SolrCore org.apache.solr.core.SolrCore@79f57301
+2021-02-10 21:08:33.742 INFO  (qtp1446922577-25) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.directory tag=SolrCore@79f57301
+2021-02-10 21:08:33.742 INFO  (qtp1446922577-25) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@659d60e: rootName = null, domain = solr.core.directory, service url = null, agent id = null] for registry solr.core.directory/com.codahale.metrics.MetricRegistry@651738ce
+2021-02-10 21:08:33.743 INFO  (searcherExecutor-91-thread-1-processing-x:directory) [   x:directory] o.a.s.c.SolrCore [directory]  Registered new searcher autowarm time: 0 ms
+2021-02-10 21:08:35.335 INFO  (qtp1446922577-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=0
+2021-02-10 21:08:35.339 INFO  (qtp1446922577-23) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=0
+2021-02-10 21:08:35.350 INFO  (qtp1446922577-21) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=13
+2021-02-10 21:08:35.353 INFO  (qtp1446922577-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=17
+2021-02-10 21:08:35.449 INFO  (qtp1446922577-22) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=2
+2021-02-10 21:08:43.995 INFO  (qtp1446922577-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=0
+2021-02-10 21:08:43.997 INFO  (qtp1446922577-25) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=0
+2021-02-10 21:08:44.000 INFO  (qtp1446922577-17) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=4
+2021-02-10 21:08:44.002 INFO  (qtp1446922577-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=7
+2021-02-10 21:08:44.109 INFO  (qtp1446922577-23) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=3
+2021-02-10 21:09:29.267 INFO  (qtp1446922577-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1612990928764} status=0 QTime=0
+2021-02-10 21:09:29.276 INFO  (qtp1446922577-22) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/config params={wt=json&_=1612990937257} status=0 QTime=2
+2021-02-10 21:09:29.284 INFO  (qtp1446922577-18) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1612990931272} status=0 QTime=14
+2021-02-10 21:09:29.291 INFO  (qtp1446922577-40) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1612990928765} status=0 QTime=21
+2021-02-10 21:09:29.402 INFO  (qtp1446922577-25) [   x:directory] o.a.s.c.S.Request [directory]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1612990931272} status=0 QTime=1
