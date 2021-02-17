@@ -1,2 +1,4 @@
-solrdata/data/directory/data/*
-solrdata/logs/*
+solrdata/data/directory/data
+solrdata/logs
+solrdata/data/filestore
+solrdata/data/userfiles
