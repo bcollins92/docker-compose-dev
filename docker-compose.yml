@@ -22,7 +22,7 @@ services:
       - redis
     environment:
       - spring.redis.host=redis
-    image: "bc92/user-service"
+    image: "bc92/user-service:latest"
     ports:
       - "2081:2081"
     networks:
@@ -35,7 +35,7 @@ services:
     environment:
       - spring.redis.host=redis
       - solr.host=http://solr:8983/solr
-    image: "bc92/dir-service:latest"
+    image: "bc92/directory-service:latest"
     ports:
       - "2090:2090"
     networks:
